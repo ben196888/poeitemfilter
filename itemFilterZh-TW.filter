@@ -1,0 +1,134 @@
+﻿# 顯示, 物品種類 命運卡
+Show
+    Class 命運卡
+# 顯示, 物品種類 任務物品
+Show
+    Class 任務物品
+# 顯示, RGB 連線, 配方: 幻色石
+Show
+    SocketGroup RGB
+#顯示, 普通品質的製圖釘製作材料
+Show
+    BaseType 石錘 破岩錘 堅錘
+    Rarity = Normal
+Show
+    BaseType 石錘 破岩錘 堅錘
+    Rarity = Magic
+    Quality >= 12
+# 顯示, 品質 傳奇
+Show
+    Rarity = Unique
+# 顯示, 物品種類 異界地圖
+Show
+    Class 異界地圖
+# 顯示, 物品基底 "秘術長衣", "箴言法杖" "鋼影護手" "鹿皮手套" "砂影短靴"
+Show
+    BaseType 秘術長衣 箴言法杖 鋼影護手 鹿皮手套 砂影短靴
+    Rarity = Normal
+# 顯示, 品質稀有 物品等級60-74 物品種類武器護甲, 配方: 混沌石
+Show
+    Rarity = Rare
+    ItemLevel >= 60
+    ItemLevel <= 74
+    Class 雙手 頭部 胸甲 鞋子 腰帶 手套 項鍊 戒指
+# 顯示, 品質稀有 物品等級75以上 物品種類武器護甲, 配方: 富豪石
+Show
+    Rarity = Rare
+    ItemLevel >= 75
+    Class 雙手 頭部 胸甲 鞋子 腰帶 手套 項鍊 戒指
+# 顯示, 連線數大於等於5
+Show
+    LinkedSockets >= 5
+# 以下為必撿區, 設定文字顏色紫色 播放音效5
+# 顯示, 物品種類 "地圖碎片", 設定文字顏色紫色 播放音效5
+# XX的奉獻, 凡人的XX
+Show
+    Class 地圖碎片
+    SetTextColor 255 0 255
+    PlayAlertSound 5
+# 顯示, 物品基底 "珠寶", 設定文字顏色紫色 播放音效5
+Show
+    Class 珠寶
+    SetTextColor 255 0 255
+    PlayAlertSound 5
+# 顯示, 物品基底 "白化的羽毛" "魚竿", 設定文字顏色紫色 播放音效8
+Show
+    BaseType 白化的羽毛 魚竿
+    SetTextColor 255 0 255
+    PlayAlertSound 8
+# 顯示, 六插槽, 配方: 7x 工匠石
+Show
+    Sockets = 6
+    SetTextColor 255 0 255
+    PlayAlertSound 4
+# 顯示, 五連以上
+Show
+    LinkedSockets >= 5
+    SetTextColor 255 0 255
+    PlayAlertSound 4
+# 顯示, 常見通貨
+Show
+    BaseType 傳送卷軸 知識卷軸
+# 顯示, 常見通貨
+Show
+    Class 通貨
+    SetTextColor 255 0 255
+    PlayAlertSound 4
+# 顯示, 物品種類技能寶石 品質大於1, 設定文字顏色紫色
+# 技能寶石會包含主動技能寶石和輔助技能寶石
+Show
+    Quality >= 1
+    Class 技能寶石
+    SetTextColor 255 0 255
+# 顯示, 物品種類 技能寶石
+Show
+    Class 技能寶石
+#顯示, 物品等級大於75 物品種類戒指或護身符
+Show
+    ItemLevel >= 75
+    Rarity = Normal
+    Class 戒指 項鍊
+#顯示, 物品種類藥劑 品質20
+Show
+    Quality = 20
+    Class 藥劑
+#顯示, 物品基底為常用製作基底且物品等級大於等於78
+Show
+    BaseType 伏擊刺刃 魔性法杖 先驅者之弓 黃晶護身符 寶鑽戒指 雙玉戒指 三相戒指 瑪瑙護身符 皮革腰帶
+    ItemLevel >= 78
+#顯示, 基礎掉落等級>=70
+Show
+    DropLevel >= 70
+#顯示, 低等4L
+Show
+    ItemLevel <= 40
+    LinkedSockets >= 4
+#隱藏, 20以上的魔法飾品
+Hide
+    Class 戒指 項鍊 腰帶
+    ItemLevel >= 20
+    Rarity <= Magic
+#隱藏, 武器裝備且稀有度在魔法以下的
+Hide
+    Class 弓 細劍 法杖 爪 匕首 單手劍 單手斧 單手錘 長杖 雙手劍 雙手斧 雙手錘 權杖 手套 鞋子 胸甲 頭部 盾 箭袋
+    Rarity <= Magic
+#隱藏, 物品類型複合藥劑且品質小於或等於魔法
+Hide
+    Class 複合藥劑
+    Rarity <= Magic
+#隱藏, 藥劑特別分類
+Hide
+    Class 生命藥劑 魔力藥劑
+    DropLevel < 20
+    ItemLevel >= 20
+    Rarity <= Magic
+Hide
+    Class 生命藥劑 魔力藥劑
+    DropLevel < 40
+    ItemLevel >= 40
+    Rarity <= Magic
+Hide
+    Class 生命藥劑 魔力藥劑
+    DropLevel < 60
+    ItemLevel >= 60
+    Rarity <= Magic
