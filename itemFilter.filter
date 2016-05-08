@@ -1,4 +1,4 @@
-# show, item class 
+# 顯示, 物品種類 命運卡
 Show
     Class 命運卡
 # 顯示, 物品種類 任務物品
@@ -18,13 +18,46 @@ Show
 # 顯示, 品質 傳奇
 Show
     Rarity = Unique
+    SetFontSize 300
 # 顯示, 物品種類 異界地圖
 Show
     Class 異界地圖
-# 顯示, 物品基底 "秘術長衣", "箴言法杖" "鋼影護手" "鹿皮手套" "砂影短靴"
+# 顯示, 物品基底 機會石點傳奇基底
+# "大CI"
 Show
-    BaseType 秘術長衣 箴言法杖 鋼影護手 鹿皮手套 砂影短靴
+    BaseType 秘術長衣
     Rarity = Normal
+    SetBorderColor 255 0 0 
+# "潛能魔棒"
+Show
+    BaseType 箴言法杖
+    Rarity = Normal
+    SetBorderColor 255 0 0 
+# "富貴手"
+#Show
+#    BaseType 鋼影護手
+#    Rarity = Normal
+#    SetBorderColor 255 0 0 
+# "鹿手"
+#Show
+#    BaseType 鹿皮手套
+#    Rarity = Normal
+#    SetBorderColor 255 0 0 
+# "打寶鞋"
+#Show
+#    BaseType 砂影短靴
+#    Rarity = Normal
+#    SetBorderColor 255 0 0 
+# "死神手"
+#Show
+#    BaseType 卡魯權杖
+#    Rarity = Normal
+#    SetBorderColor 255 0 0 
+# "空向"
+Show
+    BaseType 術士長靴
+    Rarity = Normal
+    SetBorderColor 255 0 0 
 # 顯示, 品質稀有 物品等級60-74 物品種類武器護甲, 配方: 混沌石
 Show
     Rarity = Rare
@@ -35,7 +68,13 @@ Show
 Show
     Rarity = Rare
     ItemLevel >= 75
-    Class 雙手 頭部 胸甲 鞋子 腰帶 手套 項鍊 戒指
+    Class 頭部 胸甲 鞋子 腰帶 手套 項鍊 戒指
+    SetBorderColor 0 255 0 
+Show
+    Rarity = Rare
+    ItemLevel >= 75
+    Class 弓 細劍 法杖 爪 匕首 單手劍 單手斧 單手錘 長杖 雙手劍 雙手斧 雙手錘 權杖 盾 箭袋
+    SetBorderColor 0 255 0 
 # 顯示, 連線數大於等於5
 Show
     LinkedSockets >= 5
@@ -66,6 +105,7 @@ Show
     LinkedSockets >= 5
     SetTextColor 255 0 255
     PlayAlertSound 4
+    SetFontSize 300
 # 顯示, 常見通貨
 Show
     BaseType 傳送卷軸 知識卷軸
@@ -74,6 +114,7 @@ Show
     Class 通貨
     SetTextColor 255 0 255
     PlayAlertSound 4
+    SetFontSize 300
 # 顯示, 物品種類技能寶石 品質大於1, 設定文字顏色紫色
 # 技能寶石會包含主動技能寶石和輔助技能寶石
 Show
@@ -96,13 +137,20 @@ Show
 Show
     BaseType 伏擊刺刃 魔性法杖 先驅者之弓 黃晶護身符 寶鑽戒指 雙玉戒指 三相戒指 瑪瑙護身符 皮革腰帶
     ItemLevel >= 78
+    SetBorderColor 0 0 255
 #顯示, 基礎掉落等級>=70
-Show
-    DropLevel >= 70
+#Show
+#    DropLevel >= 70
 #顯示, 低等4L
 Show
     ItemLevel <= 40
     LinkedSockets >= 4
+
+#顯示, Talisman
+Show
+    BaseType "Talisman"
+    SetTextColor 255 0 255
+
 #隱藏, 20以上的魔法飾品
 Hide
     Class 戒指 項鍊 腰帶
